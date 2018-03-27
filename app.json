@@ -1,0 +1,53 @@
+{
+  "name": "firstsaturdaylime",
+  "scripts": {
+  },
+  "env": {
+    "CLEARDB_DATABASE_URL": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "DISABLE_WP_CRON": {
+      "required": true
+    },
+    "MEMCACHIER_PASSWORD": {
+      "required": true
+    },
+    "MEMCACHIER_SERVERS": {
+      "required": true
+    },
+    "MEMCACHIER_USERNAME": {
+      "required": true
+    },
+    "NEW_RELIC_LICENSE_KEY": {
+      "required": true
+    },
+    "NEW_RELIC_LOG": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "WP_CACHE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "cleardb",
+    "memcachier",
+    "newrelic",
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
